@@ -45,6 +45,8 @@ img {
 	position: relative;
 	line-height: 130px;
 	text-shadow: 0 0 5px #444;
+	text-decoration: none;
+	color: white;
 }
 #start a:before, 
 #start a:after {
