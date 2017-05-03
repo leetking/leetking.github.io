@@ -1,8 +1,11 @@
-- name: "Contact"
-  link: "contact"
+- name: "Me"
+  link: "me"
 
-- name: "Resume"
-  link: "resume.pdf"
+- name: "Tags"
+  link: "tags"
 
-- name: "About"
-  link: "/me/"
+- name: "Random"
+  link: "random"
+
+- name: "Posts"
+  link: "posts"
