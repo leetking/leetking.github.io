@@ -3,9 +3,11 @@ layout: default
 is_contact: true
 ---
 
-* Email: [foo@xyz.com](mailto:foo@xyz.com)
+* Email: [li_Tking@163.com](mailto:li_Tking@163.com)
 
-* Phone: [+91-123123](tel:+91-123123)
+* Github: [leetking](https://github.com/leetking)
+
+* QQ: [1790987512](qq:1790987512)
 
 ---
 
@@ -22,5 +24,3 @@ is_contact: true
 ## Social
 
 1. [Facebook](#)
-2. [Twitter](#)
-3. [Google+](#)
