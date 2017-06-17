@@ -1,3 +1,5 @@
 # 个人静态博客
 
-使用jekyll的[researcher](github.com/bk2dcradle/researcher)主题
+# 感谢
+ - [researcher](github.com/bk2dcradle/researcher)主题
+ - [hightlight]代码高亮

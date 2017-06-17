@@ -1,11 +1,33 @@
 title: 上善若水
-url: ""
-baseurl: ""
+locale: zh_CN
+description: 个人博客
+#logo: logo.png
+url: https://github.com/leetking
+
+encoding: "utf-8"
 
 markdown: kramdown
+highlighter: rouge
+kramdown:
+  input:        GFM
+  auto_ids:     true
+  hard_wrap:    false
+  auto_id_prefix: 'id-'
+  math_engine:  mathjax
+  
+mathjax: true
 
-tracking_id: #
+coments: true
 
 sass:
-    style: compressed
-    sass_dir: _sass
+  style: compressed
+  sass_dir: _sass
+
+# Site owner
+owner:
+  name: leetking
+  #avatar: xx.png
+  email: li_Tking@163.com
+  #telegram: 
+  #github: leetking
+  #google:
