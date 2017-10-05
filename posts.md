@@ -5,4 +5,6 @@ date: 2017-05-03 10:35:06
 author: leetking
 ---
 
-Post List
+{% for i in site.posts %}
+  <h3><a href="{{ i.url }}">{{ i.title }}</a></h3>
+{% endfor %}
