@@ -4,8 +4,8 @@
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="blog, accent, {{ site.author }}, {{ site.title }}, jekyll">
-    <meta name="author" content="{{ site.author }}">
+    <meta name="keywords" content="blog, accent, {{ site.owner.name }}, {{ site.title }}, jekyll">
+    <meta name="author" content="{{ site.owner.name }}">
     {% if page.url == "/404.html" %}
       <meta http-equiv="refresh" content="5; url=/">
     {% endif %}

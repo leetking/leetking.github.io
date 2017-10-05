@@ -3,4 +3,4 @@ layout: default
 title: "Me"
 ---
 
-关于我
+Telegram: <a href="{{ site.owner.telegram }}"> {{ site.owner.name }}</a>

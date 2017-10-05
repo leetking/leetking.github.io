@@ -2,7 +2,7 @@
 layout: default
 title: "在树莓派2B上安装gentoo"
 date: 2017-04-23 10:35:06
-author: leetking
+author: alpha 0x00
 categories: gentoo
 ---
 

@@ -1,6 +1,6 @@
 title: 上善若水
 locale: zh_CN
-description: 个人博客
+description: 胡言乱语
 #logo: logo.png
 url: https://github.com/leetking
 
@@ -25,9 +25,9 @@ sass:
 
 # Site owner
 owner:
-  name: leetking
+  name: alpha 0x00
   #avatar: xx.png
   email: li_Tking@163.com
-  #telegram: 
+  telegram: https://t.me/leetking
   #github: leetking
   #google:

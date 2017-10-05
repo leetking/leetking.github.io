@@ -2,7 +2,7 @@
 layout: default
 title: "Hello Jekyll"
 date: 2017-04-23 10:35:06
-author: leetking
+author: alpha 0x00
 categories: jekyll
 ---
 
