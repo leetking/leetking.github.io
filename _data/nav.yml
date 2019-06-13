@@ -1,11 +1,5 @@
 - name: "Me"
   link: "me"
 
-- name: "Tags"
-  link: "tags"
-
-- name: "Random"
-  link: "random"
-
 - name: "Posts"
   link: "posts"

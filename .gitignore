@@ -1,6 +1,4 @@
-_site
+_site/
 _drafts/
-.sass-cache
 .sass-cache/
-.DS_Store
-/todo
+todo

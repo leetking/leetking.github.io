@@ -1,6 +1,8 @@
 ---
 layout: default
-title: "Me"
+title: "我"
 ---
 
-Telegram: <a href="{{ site.owner.telegram }}"> {{ site.owner.name }}</a>
+{% for c in site.data.me %}
+  {{ c.name }}: <a href="{{ c.url }}"> {{ c.nickname }}</a>
+{% endfor %}

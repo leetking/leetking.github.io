@@ -1,7 +1,17 @@
 ---
 layout: default
-title: "Hello Jekyll"
-date: 2017-05-03 10:35:06
-author: alpha 0x00
-categories: hello-word
+title: "发声练习"
 ---
+
+<ul>
+{% for page in site.posts %}
+<li style="clear: right">
+  <h3 style="margin: 0; display: inline-block"><a href="{{ page.url }}">{{ page.title }}</a></h3>
+    {% if page.create_date %}
+      <span style="float: right; height: 2em; line-height: 2em">
+        {{ page.create_date | date: "%Y-%m-%d" }} / {{ page.modify_date | date: "%Y-%m-%d"}}
+      </span>
+    {% endif %}
+</li>
+{% endfor %}
+</ul>

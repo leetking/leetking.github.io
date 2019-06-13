@@ -1,12 +1,13 @@
 ---
 layout: default
-title: "在树莓派2B上安装gentoo"
-date: 2017-04-23 10:35:06
-author: alpha 0x00
-categories: gentoo
+title: "在树莓派2B上安装 Gentoo"
+create_date: 2017-06-21
+modify_date: 2019-06-13
+categories: [gentoo, respberry-pi]
+permalink: /install-gentoo-on-respberry-pi
 ---
 
-# 在树莓派2B上安装gentoo
+# 在树莓派2B上安装 Gentoo
 
 ## 一、对SD卡分区并格式化
 
@@ -29,6 +30,7 @@ $ mount -l | grep sdb
 ```
 
 ## 二、挂载分区到宿主系统
+
 现在的mount可以不指定文件系统类型而可以自行确定。
 ```bash
 # mount /dev/sdb2 ~/pi
@@ -37,6 +39,7 @@ $ mount -l | grep sdb
 ```
 
 ## 三、安装gentoo和树莓派固件
+
 这里由gentoo提供基本文件系统`stage3`包和包管理器`portage`，内核和引导固件由树莓派官方提供。
 ```bash
 $ # 下载gentoo的stage3文件
@@ -53,10 +56,13 @@ $ cp -r ../modules ~/pi/lib/
 ```
 
 ## 四、配置系统
+
 ### 1. 编辑内核启动参数
+
 `/etc/cmdline.txt`是内核启动参数配置文件。
 ```txt
 ```
+
 ### 2. 编辑`fstab`挂载文件系统
 
 生成linux用户等里密码的加密值
@@ -73,6 +79,7 @@ $ openssl passwd -1
 gentoo通过保存use、make.conf、还有/var/lib/portage/world，这样可以随时构建出原来的系统。
 
 ## TODO
+
 1. f2fs性质
 2. fstab编写挂在参数
 3. cmdline.txt里一些参数不理解

@@ -1,20 +1,23 @@
-title: 上善若水
+title: 发声练习
 locale: zh_CN
-description: 胡言乱语
+description: 如婴儿般的第一声哭啼
 #logo: logo.png
 url: https://github.com/leetking
 
 encoding: "utf-8"
 
-markdown: kramdown
-highlighter: rouge
+# markdown: kramdown
+# highlighter: rouge
+
 kramdown:
-  input:        GFM
-  auto_ids:     true
-  hard_wrap:    false
-  auto_id_prefix: 'id-'
+  # auto_ids:     true
+  #auto_id_prefix: 'id-'
+  # input:        GFM
+  # hard_wrap:    false
+  # toc_level:    1..6
   math_engine:  mathjax
-  
+
+
 mathjax: true
 
 coments: true
@@ -22,12 +25,3 @@ coments: true
 sass:
   style: compressed
   sass_dir: _sass
-
-# Site owner
-owner:
-  name: alpha 0x00
-  #avatar: xx.png
-  email: li_Tking@163.com
-  telegram: https://t.me/leetking
-  #github: leetking
-  #google:

@@ -1,10 +1,17 @@
 ---
 layout: default
-title: "Post List"
-date: 2017-05-03 10:35:06
-author: {{ site.owner.name }}
+title: "呕哑嘲哳"
 ---
 
-{% for i in site.posts %}
-  <h3><a href="{{ i.url }}">{{ i.title }}</a></h3>
+<ul>
+{% for page in site.posts %}
+<li style="clear: right">
+  <h3 style="margin: 0; display: inline-block"><a href="{{ page.url }}">{{ page.title }}</a></h3>
+    {% if page.create_date %}
+      <span style="float: right; height: 2em; line-height: 2em">
+        {{ page.create_date | date: "%Y-%m-%d" }} / {{ page.modify_date | date: "%Y-%m-%d"}}
+      </span>
+    {% endif %}
+</li>
 {% endfor %}
+</ul>
