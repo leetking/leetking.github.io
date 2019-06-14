@@ -1,0 +1,18 @@
+@import "vars";
+
+.posts-list {
+    .posts-entry {
+        clear: right;
+
+        .posts-title {
+            margin: 0;
+            display: inline-block;
+        }
+
+        .posts-date {
+            float: right;
+            height: 2em;
+            line-height: 2em;
+        }
+    }
+}

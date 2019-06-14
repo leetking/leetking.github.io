@@ -1,27 +1,68 @@
 title: 发声练习
 locale: zh_CN
-description: 如婴儿般的第一声哭啼
+description: 婴儿般的第一声哭啼
 #logo: logo.png
-url: https://github.com/leetking
-
-encoding: "utf-8"
+url: https://leetking.github.io/
 
 # markdown: kramdown
-# highlighter: rouge
-
 kramdown:
-  # auto_ids:     true
-  #auto_id_prefix: 'id-'
-  # input:        GFM
-  # hard_wrap:    false
-  # toc_level:    1..6
-  math_engine:  mathjax
+  # auto_ids: true
+  # auto_id_prefix: ''
+  # input: GFM
+  # hard_wrap: false
+  # toc_level: 1..6
+  # math_engine: mathjax
+  # syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    default_lang: text
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 0
+      line_format: '%02i'
 
+# liquid:
+#     error_mode: warn
 
-mathjax: true
+# disable plugin jekyll-toc, since Gtihub Page doesn't support
+#plugins:
+#  - jekyll-toc
 
-coments: true
+# mathjax: true
+# coments: true
 
 sass:
   style: compressed
-  sass_dir: _sass
+  # sass_dir: _sass
+
+# settings of jekyll-toc plugin
+toc:
+  min_level: 2
+  max_level: 6
+  list_class: toc-list
+  # item_class: toc-entry
+  # item_prefix: toc-
+
+# Front Matter Defaults
+defaults:
+- scope:
+    path: ""    # an empty path here means all files in the project
+  values:
+    layout: default
+- scope:
+    path: _posts
+    type: posts
+  values:
+    layout: posts
+    toc: true
+
+
+exclude:
+- .gitignore
+- .jekyll-cache
+- icomoon-selection.json
+- todo
+- README.md
+- LICENSE

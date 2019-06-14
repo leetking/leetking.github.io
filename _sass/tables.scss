@@ -32,3 +32,24 @@ table tr th :first-child, table tr td :first-child {
 table tr th :last-child, table tr td :last-child {
     margin: 0;
 }
+
+.rouge-table {
+    margin: 0;
+    padding: 0;
+    border-collapse: unset;
+    width: auto;
+
+    tr {
+        background-color: unset;
+        border: none;
+
+        td:nth-child(2) {
+            width: 100%;
+            border-left: 1px solid #cccccc;
+        }
+
+        td {
+            border: none;
+        }
+    }
+}

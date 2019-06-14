@@ -1,13 +1,10 @@
 ---
-layout: default
 title: "在树莓派2B上安装 Gentoo"
 create_date: 2017-06-21
 modify_date: 2019-06-13
 categories: [gentoo, respberry-pi]
 permalink: /install-gentoo-on-respberry-pi
 ---
-
-# 在树莓派2B上安装 Gentoo
 
 ## 一、对SD卡分区并格式化
 
@@ -60,8 +57,7 @@ $ cp -r ../modules ~/pi/lib/
 ### 1. 编辑内核启动参数
 
 `/etc/cmdline.txt`是内核启动参数配置文件。
-```txt
-```
+
 
 ### 2. 编辑`fstab`挂载文件系统
 

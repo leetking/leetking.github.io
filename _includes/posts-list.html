@@ -1,0 +1,12 @@
+<div class="posts-list">
+  <ul>
+    {% for page in site.posts %}
+    <li class="posts-entry">
+      <h3 class="posts-title"><a href="{{ page.url }}">{{ page.title }}</a></h3>
+      <span class="posts-date">
+        {{ page.create_date | date: "%Y-%m-%d" }} / {{ page.modify_date | date: "%Y-%m-%d"}}
+      </span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

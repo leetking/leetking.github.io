@@ -10,6 +10,7 @@ html {
     padding: 0;
 }
 body {
+    background: $main-color;
     margin: 0;
     font-family: "Inconsolata";
     height: 100%;
@@ -19,7 +20,7 @@ a {
     color: $accent;
 }
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 hr {
     border: 0;
@@ -98,3 +99,6 @@ hr {
 
 @import "typography";
 @import "tables";
+@import "toc";
+@import "posts-list";
+@import "article";
