@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "我"
+title: 我
 ---
 
 {% for c in site.data.me %}

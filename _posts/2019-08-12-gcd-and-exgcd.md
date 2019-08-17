@@ -1,7 +1,7 @@
 ---
 title: 最大公约数和辗转相除法
 create_date: 2019-08-12
-modify_date: 2019-08-12
+modify_date: 2019-08-17
 categories: [gcd, algorithm]
 ---
 
@@ -228,7 +228,7 @@ a_n \\
 \tag{eq-1}
 $$
 
-其中 $k_i = \left \lfloor \frac{a_i}{b_i} \right \rfloor$。上述任意一个矩阵其行列式为 $-k_i \neq 0$，那么这些矩阵相乘得到
+其中 $k_i = \left \lfloor \frac{a_i}{b_i} \right \rfloor$。上述任意一个矩阵其行列式为 $-1 \neq 0$，那么这些矩阵相乘得到
 
 $$
 \begin{bmatrix}
