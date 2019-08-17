@@ -1,0 +1,29 @@
+\documentclass[tikz]{standalone}
+
+\begin{document}
+\begin{tikzpicture}[smooth,domain=-6:6]
+    \draw[->] (-6,0)--(0,0) node[anchor=north east]{$O$}--(6,0) node[below]{$x$};
+    \draw[->] (0,-1)--(0,0)--(0,3) node[right]{$y$};
+    %\draw[very thin,color=gray](-10,-1.5) grid (10, 3);
+
+    % draw \tilde f(x)
+    \foreach \s in {-6.8,-4.8,-2.8,-0.8,1.2,3.2,5.2}
+        \draw[dashed,domain=\s:\s+2,samples=100] plot (\x, {exp(-(\x-\s-1)*(\x-\s-1))+1});
+    \draw (-4,2)node[above] {$\tilde f(x)$};
+
+    % draw f(x)
+    \draw[domain=3.2:5.2,samples=100] plot (\x, {exp(-(\x-4.2)*(\x-4.2))+1});
+    \draw (4,2)node[above] {$f(x)$};
+    \foreach \x in {3.2,5.2}
+        \draw[very thin,color=gray,dashed] (\x,0)--(\x,1/e+1);
+    \draw (3.2,0)node[below]{$t$} (5.2,0)node[below]{$t+T$};
+
+    % draw f^1(x)
+    \draw[domain=-1:-0.8,samples=50] plot (\x, {exp(-(\x+1.8)*(\x+1.8))+1});
+    \draw[domain=-0.8:1,samples=100] plot (\x, {exp(-(\x-0.2)*(\x-0.2))+1});
+    \foreach \x in {-1,1}
+        \draw[very thin,color=gray,dashed] (\x,0)--(\x,1/e^0.64+1);
+    \draw (-1,0)node[below]{$-\frac{T}{2}$} (1,0)node[below]{$\frac{T}{2}$};
+    \draw (0,2)node[left,above,fill=white] {$f^1(x)$};
+\end{tikzpicture}
+\end{document}

@@ -14,5 +14,10 @@
             height: 2em;
             line-height: 2em;
         }
+        @media (max-width: $small-width) {
+            .posts-date {
+                display: none;
+            }
+        }
     }
 }
