@@ -1,7 +1,7 @@
 ---
 title: Hello Jekyll
 create_date: 2019-06-13
-modify_date: 2019-06-14
+modify_date: 2019-08-30
 categories: [jekyll, liquid, mathjax, note]
 permalink: /hello-jekyll
 ---
@@ -194,6 +194,11 @@ hljs.initHighlightingOnLoad();
 MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
 ```
 
+* 配置 MathJax 支持 mediawiki-texvc，如果想支持 `\Omicron` 之类大写希腊字母就需要开启
+```javascript
+TeX: { extensions: ["mediawiki-texvc.js"] }
+```
+
 
 ## 添加 ToC
 
@@ -254,8 +259,8 @@ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
 
   记场 $ \vec F = (P, Q, R) $，$\Gamma$ 为光滑曲线，则场 $\vec F$ 在上 $\Gamma$ 的第二型曲线积分为：
 
-  $$ W = \int_\, \Gamma \vec F \mathrm{d} \vec \tau
-  = \int_\, \Gamma (P, Q, R) \cdot (\cos \alpha, \cos \beta, \cos \gamma) \mathrm{d} \Gamma $$
+  $$ W = \int_\Gamma \vec F\, \mathrm{d} \vec \tau
+  = \int_\Gamma (P, Q, R) \cdot (\cos \alpha, \cos \beta, \cos \gamma)\, \mathrm{d} \Gamma $$
 
   $\vec \tau$ 为 $\Gamma$ 的方向向量
 

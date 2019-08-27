@@ -1,7 +1,7 @@
 ---
 title: 从正交基角度看待傅里叶级数
 create_date: 2019-08-07
-modify_date: 2019-08-16
+modify_date: 2019-08-27
 categories: [mathematics, fourier]
 ---
 

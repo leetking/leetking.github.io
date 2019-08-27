@@ -1,7 +1,7 @@
 ---
 title: 最大公约数和辗转相除法
 create_date: 2019-08-12
-modify_date: 2019-08-17
+modify_date: 2019-09-06
 categories: [gcd, algorithm]
 ---
 
@@ -132,7 +132,7 @@ b_0     &\ge b_1 + b_2     &\ge Fib(n-1) + Fib(n-2) &= Fib(n) \\
 \end{array}
 $$
 
-那么 $b = b_0 \ge Fib(n) \approx \frac{1}{5} \phi^n$，两边求对数 $n \le (\log \phi - log \sqrt{5}) \log b$，也就是
+那么 $b = b_0 \ge Fib(n) \approx \frac{1}{5} \phi^n$，两边求对数 $n \le (\log \phi - \log \sqrt{5}) \log b$，也就是
 
 $$
 n = \Omicron (\log b)
@@ -147,19 +147,20 @@ $$
 
 $$
 \begin{align}
-             \gcd(a, 0) &= a \\
-             \gcd(a, b) &= \gcd(b, a) \\
-             \gcd(a, b) &= \gcd(\vert a \vert, \vert b \vert) \\
-\tag{attr-1} \gcd(a, b) &= \gcd(b, a-b)\quad \text{假定}\ a \ge b \\
-             \gcd(a, b) &= \gcd(b, a\%b) \\
-\tag{attr-2} \gcd(a, b) &= k \times \gcd(a/k, b/k)\quad  \text{如果} \  k \mid a,\, k \mid b \\
-\tag{attr-3} \gcd(a, b) &= \gcd(a, b/k)\quad \text{如果} \  k \nmid a, \, k \mid b \\
-             \gcd(a, b) &= 1\quad \text{如果}\  a, b \ \text{是质数} \\
-             \gcd(a, b, c) &= \gcd(a, \gcd(b, c)) = \gcd(\gcd(a, b), c) \\
+\gcd(a, 0) &= a \\
+\gcd(a, b) &= \gcd(b, a) \\
+\gcd(a, b) &= \gcd(\vert a \vert, \vert b \vert) \\
+\gcd(a, b) &= \gcd(b, a-b)\quad \text{假定}\ a \ge b \tag{attr-1} \\
+\gcd(a, b) &= \gcd(b, a\%b) \\
+\gcd(a, b) &= k \times \gcd(a/k, b/k)\quad  \text{如果} \  k \mid a,\, k \mid b \tag{attr-2} \\
+\gcd(a, b) &= \gcd(a, b/k)\quad \text{如果} \  k \nmid a, \, k \mid b \tag{attr-3} \\
+\gcd(a, b) &= 1\quad \text{如果}\  a, b \ \text{是质数} \\
+\gcd(a, bc) &= \gcd(a, b) \gcd(a, c) \\
+\gcd(a, b, c) &= \gcd(a, \gcd(b, c)) = \gcd(\gcd(a, b), c) \\
 \end{align}
 $$
 
-上述性质不难证明。此外如果 $\gcd(a, b) = 1$，那么称 $a, b$ 互质。
+上述性质不难证明。此外如果 $\gcd(a, b) = 1$，称 $a, b$ 互质。
 
 
 ### 最大公约数的几何解释
@@ -414,7 +415,7 @@ int gcd2(int a, int b)
 
 * 余数
 
-对于任意整数整数 $n$，存在整数 $m$ 和整数 $k$，有**正**整数 $r$（这里 $0 < r \le \vert n \vert$），使得 $n = k \times m + r$ 成立，那么 $r$ 便是 $n$ 除以 $m$ 的**余数**。记作 $ r = n \mod m$ 或者 $r = n\%k$。
+对于任意整数 $n$ 和非零整数 $m$，存在唯一整数 $k$ 和 $r$ （这里 $0 \le r < \vert m \vert$），使得 $n = k \times m + r$ 成立，那么 $r$ 便是 $n$ 除以 $m$ 的**余数**。记作 $ r = n \mod m$ 或者 $r = n\%k$。
 
 例如：$6$ 除以 $4$ 的余数是 $2$，因为 $6 = 1 \times 4 + 2$。
 
